@@ -30,8 +30,8 @@ export default function LabelSelect({
     return options.filter((o) => o.toLowerCase().includes(kw))
   }, [value, options])
 
-  function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
-    onChange(e.target.value)
+  function handleInput(e: React.InputEvent<HTMLInputElement>) {
+    onChange(e.currentTarget.value)
     setOpen(true)
     setHighlight(0)
   }

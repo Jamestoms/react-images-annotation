@@ -29,6 +29,8 @@ export default defineConfig(({ command }) => {
           rollupOptions: {
             external: isExternal,
             output: {
+              // 入口同时存在默认导出与命名导出，显式声明 named 避免 UMD 下 default 访问歧义告警
+              exports: 'named',
               globals: (id: string) => (id.startsWith('react') ? 'React' : 'fabric'),
             },
           },
