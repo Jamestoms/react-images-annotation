@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-demo
+*.local
+.DS_Store
+npm-debug.log*
+
+# vitest HTML 测试报告（pnpm test 生成）
+.vitest/
